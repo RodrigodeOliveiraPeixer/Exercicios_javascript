@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    lado1:<input id="num1" type="number"> <br/>
+    lado2:<input id="num2" type="number"> <br/>
+    lado3:<input id="num3" type="number"> <br/>
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> pesquisar </button>
+
+</body>
+
+<script>
+    // exemplo de input HTML
+    // input numérico: <input id="numero1" type="number"> <br />
+    // input texto: <input id="numero1" type="text"> <br />
+
+    // tipos de conversor
+        // parseString -> transforma de Integer/float para String
+        // parseInt -> transforma de String para Integer
+        // parseFloat -> transformad e String/Integer para Float
+
+    //  exemplo de function JavaScript
+    function exibir(){
+
+        var lado1 = parseInt(document.getElementById("num1").value);
+        var lado2 = parseInt(document.getElementById("num2").value);
+        var lado3 = parseInt(document.getElementById("num3").value);
+        
+
+        if((lado1+lado2)<lado3 && (lado1+lado3)<lado2 && (lado2+lado3)<lado1){
+            
+            }if((lado1 ==lado2) && (lado2 == lado3)){
+                document.write("Triangulo Equilatero")
+            }else if((lado1 == lado2) ||  (lado1 == lado3)||(lado3==lado2)){
+                document.write("Trianqulo Isósceles")
+            }else{
+                document.write("triangulo Escaleno")
+            }
+        
+            
+        
+
+
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+        
+
+    }
+
+</script>
+
+</html>

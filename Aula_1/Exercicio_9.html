@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    Qnt horas trabalhadas mês:<input id="hora1" type="number"> <br/>
+    Valor Hora:<input id="hora2" type="number"> <br/>
+    
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> Calcular </button>
+
+</body>
+
+<script>
+    // exemplo de input HTML
+    // input numérico: <input id="numero1" type="number"> <br />
+    // input texto: <input id="numero1" type="text"> <br />
+
+    // tipos de conversor
+        // parseString -> transforma de Integer/float para String
+        // parseInt -> transforma de String para Integer
+        // parseFloat -> transformad e String/Integer para Float
+
+    //  exemplo de function JavaScript
+    function exibir(){
+
+        
+        var Qnt_horas_trabalhadas_mês = parseFloat(document.getElementById("hora1").value);
+        var valor_hora = parseInt(document.getElementById("hora2").value);
+        var Salário_bruto = Qnt_horas_trabalhadas_mês*valor_hora;
+            document.write("Salario bruto:" +valor_hora * Qnt_horas_trabalhadas_mês+"<br>")
+        i2=Salário_bruto*0.05;
+        i3=Salário_bruto*0.10;
+        i4=Salário_bruto*0.20;    
+     
+        if(Salário_bruto<=900){
+        }else if(Salário_bruto <=1500 && Salário_bruto>900){
+            document.write("(-) IR (5%)&nbsp&nbsp&nbsp:R$" +i2+ "<br>")
+        }else if(Salário_bruto<=2500 && Salário_bruto>1500){
+            document.write("(-) IR (10%)&nbsp&nbsp&nbsp:R$" +i3+ "<br>")
+        }else{
+            document.write("(-) IR (20%)&nbsp&nbsp&nbsp:R$" +i4+ "<br>")
+        }
+
+        INSS = Salário_bruto*0.10
+            document.write("(-) INSS ( 10%)&nbsp&nbsp&nbsp: R$"+INSS+"<br>")
+            
+    }
+        
+
+    
+
+</script>
+
+</html>

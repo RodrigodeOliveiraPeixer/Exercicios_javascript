@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Turno:<input id="nome" type="text"> <br/>
+    
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> Cadastrar </button>
+
+</body>
+
+<script>
+    alert("Em qual turno você estuda?\n\n"+
+         "Digite\n\n"+
+         "M - Matutino\n"+
+         "V - Vespertino\n"+
+         "N - Noturno\n")
+    
+
+    
+    
+    function exibir(){
+        
+        var turno = document.getElementById("nome").value;
+        
+
+        switch(turno){
+            case"M":
+            document.write("Bom dia!!")
+            break
+            case"m":
+            document.write("Bom dia!!")
+            break
+
+            case"V":
+            document.write("Boa tarde!!")
+            break
+            case"v":
+            document.write("Boa tarde!!")
+            break
+
+            case"N":
+            document.write("Boa noite!!")
+            break
+            case"n":
+            document.write("Boa noite!!")
+            break
+
+            default:
+                document.write("Valor inválido")
+
+
+        
+        }
+
+        
+
+
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+        
+
+    }
+
+</script>
+
+</html>

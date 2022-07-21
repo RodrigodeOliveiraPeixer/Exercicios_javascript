@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    primeiro numero:<input id="valor1" type="number"> <br/>
+    segundo numero:<input id="valor2" type="number"> <br/>
+    
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="inverte()"> inverter </button>
+
+</body>
+
+<script>
+    
+    function inverte(){
+
+        var numero1 = parseFloat(document.getElementById("valor1").value);
+        var numero2 = parseFloat(document.getElementById("valor2").value);
+        var aux = numero1;
+
+        numero1=numero2;
+        numero2=aux;
+
+        alert("Antes:\n"+
+            "valor1="+document.getElementById("valor1").value+"\n"+
+            "valor2="+document.getElementById("valor2").value+"\n\n"+
+            "Invertido:\n"+
+            "valor1="+numero1+"\n"+
+            "valor2="+numero2+"\n\n");
+        
+
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+       
+
+    }
+
+</script>
+
+</html>

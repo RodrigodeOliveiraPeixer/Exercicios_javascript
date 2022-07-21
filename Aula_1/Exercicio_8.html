@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    Salário :<input id="valor" type="number"> <br/>
+    
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> pesquisar </button>
+
+</body>
+
+<script>
+    // exemplo de input HTML
+    // input numérico: <input id="numero1" type="number"> <br />
+    // input texto: <input id="numero1" type="text"> <br />
+
+    // tipos de conversor
+        // parseString -> transforma de Integer/float para String
+        // parseInt -> transforma de String para Integer
+        // parseFloat -> transformad e String/Integer para Float
+
+    //  exemplo de function JavaScript
+    function exibir(){
+
+        
+        var salario = parseFloat(document.getElementById("valor").value);
+            document.write("O salário antes do reajuste: R$ "+salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>")
+        if(salario<=280){
+            document.write("O percentual de aumento aplicado foi de: 20% <br>")
+        }else if(salario<=700 && salario>280){
+            document.write("O percentual de aumento aplicado foi de: 15% <br>")
+        }else if(salario<=1500 && salario>700){
+            document.write("O percentual de aumento aplicado foi de: 10% <br>")
+        }else{
+            document.write("O percentual de aumento aplicado foi de: 5% <br>")
+        }
+        
+        reajuste1 = salario*0.20;
+        reajuste2 = salario*0.15;
+        reajuste3 = salario*0.10;
+        reajuste4 = salario*0.05;
+
+        if(salario <= 280){
+            document.write("O valor do aumento foi de: R$ "+reajuste1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else if(salario <= 700 && salario > 280){
+            document.write("O valor do aumento foi de: R$ "+reajuste2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else if(salario > 700 && salario <= 1500){
+            document.write("O valor do aumento foi de: R$ "+reajuste3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else{
+            document.write("O valor do aumento foi de: R$ "+reajuste4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }
+
+        salariofinal1 = salario + reajuste1
+        salariofinal2 = salario + reajuste2
+        salariofinal3 = salario + reajuste3
+        salariofinal4 = salario + reajuste4
+
+        if(salario <= 280){
+            document.write("O novo salário, após o aumento: R$ "+salariofinal1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else if(salario <= 700 && salario > 280){
+            document.write("O novo salário, após o aumento: R$ "+salariofinal2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else if(salario > 700 && salario <= 1500){
+            document.write("O novo salário, após o aumento: R$ "+salariofinal3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }else{
+            document.write("O novo salário, após o aumento: R$ "+salariofinal4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+"<br>");
+        }
+
+    
+
+
+        
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+        
+
+    }
+
+</script>
+
+</html>

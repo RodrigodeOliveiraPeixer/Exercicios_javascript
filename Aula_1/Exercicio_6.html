@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    Dia da semana:<input id="numero" type="number"> <br/>
+    
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> Cadastrar </button>
+
+</body>
+
+<script>
+    // exemplo de input HTML
+    // input numérico: <input id="numero1" type="number"> <br />
+    // input texto: <input id="numero1" type="text"> <br />
+
+    // tipos de conversor
+        // parseString -> transforma de Integer/float para String
+        // parseInt -> transforma de String para Integer
+        // parseFloat -> transformad e String/Integer para Float
+
+    //  exemplo de function JavaScript
+    function exibir(){
+
+       
+        
+        var dia_da_semana = document.getElementById("numero").value;
+        switch(dia_da_semana){
+            case"1":
+            document.write("1 - Domingo")
+            break
+            case"2": 
+            document.write("2 - Segunda-Feira") 
+            break  
+            case"3": 
+            document.write("3 - Terça-Feira") 
+            break 
+            case"4": 
+            document.write("4 - Quarta-Feira") 
+            break 
+            case"5": 
+            document.write("5 - Quinta-Feira") 
+            break 
+            case"6": 
+            document.write("6 - Sexta-Feira") 
+            break 
+            case"7": 
+            document.write("7 - Sábado") 
+            break 
+            default:
+            document.write("Valor inválido")
+            
+        }   
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+        
+
+    }
+
+</script>
+
+</html>

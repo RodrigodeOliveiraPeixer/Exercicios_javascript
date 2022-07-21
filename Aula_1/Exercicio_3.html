@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    num1:<input id="valor1" type="text"> <br/>
+    num2:<input id="valor2" type="number"> <br/>
+    num3:<input id="valor3" type="number"> <br/>
+
+    <!-- <button onclick="exibir()"> Escreva aqui o que deve acontencer </button> -->
+
+    <button onclick="exibir()"> Cadastrar </button>
+
+</body>
+
+<script>
+    // exemplo de input HTML
+    // input numérico: <input id="numero1" type="number"> <br />
+    // input texto: <input id="numero1" type="text"> <br />
+
+    // tipos de conversor
+        // parseString -> transforma de Integer/float para String
+        // parseInt -> transforma de String para Integer
+        // parseFloat -> transformad e String/Integer para Float
+
+    //  exemplo de function JavaScript
+    function exibir(){
+
+        var num1 = parseFloat(document.getElementById("valor1").value);
+        var num2 = parseFloat(document.getElementById("valor2").value);
+        var num3 = parseFloat(document.getElementById("valor3").value);
+
+
+        if(num1==num2 && num2==num3){
+            document.write("Todos são maiores, porque são iguais")
+        }else if(num1>num2 && num1>num3){
+            document.write("O maior número é "+num1)
+        }else if(num2>num1 && num2>num3){
+            document.write("O maior número é "+num2)
+        }else{
+            document.write("O maior número é "+num3)
+        }
+
+        // document.write("O Nome dessa pessoa é" + nome.toString())
+        // document.write("<br> sua idade é "+ idade + " anos e ela possui")
+        // document.write("<br>" + qnt_gatos.toString()+ " gatos !")
+
+        
+
+    }
+
+</script>
+
+</html>
