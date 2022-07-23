@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let listaNUmeros = []
+        let numero = 0
+        let continua = true // boleana
+
+        while(continua){
+
+            numero = prompt("informe um número")
+            listaNUmeros.push(numero)
+
+            continua = prompt("informe 1 para sair.")
+            continua = (continua != "1")
+
+        }
+
+
+        for (let index = (listaNUmeros.length-1); index >= 0; index--) {
+            document.write(index +""+ listaNUmeros[index]+"<br>")
+            // document.write(listaNUmeros[index]+"<br>")
+        }
+
+        </script>
+        </html>
