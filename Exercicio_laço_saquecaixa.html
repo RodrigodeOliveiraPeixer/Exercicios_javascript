@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+    //    let valor = prompt("Informe um número:")
+        
+          
+
+    //     const notas = [100, 50, 20, 10, 5, 2]    
+
+    //    for(let nota of notas){
+    //         let qtdNotas = parseInt(valor/nota);
+    //         document.write(+ tdNotas + "nota(s) de R$"+nota+",00");     
+    //         valor = valor % nota;
+    //    }
+
+    function contanotas(notas,entrada)
+
+    var notas = [2,5,10,20,50,100];
+    var entrada  = prompt("Digite o valor do saque(apenas números inteiros sem pontos):\nNotas disponíveis(100,50,20,10,5,2)");
+
+   for(var i = 0; i < notas.length; i++){
+        if(entrada >= notas[i])
+           var notaM = notas[i];
+    }
+    
+    var numN = entrada / notaM;
+        document.write((parseInt(numN) + " notas de : " + notaM));
+        resto = parseFloat(entrada % notaM);
+    if((resto != 0) && (resto > 1)){
+        notaQtd(notas,resto);
+    }else if(resto != 0){
+        document.write("Sobrou :" + resto);
+    }
+
+
+
+
+
+
+
+        
+
+</script>
+</body>
+</html>
