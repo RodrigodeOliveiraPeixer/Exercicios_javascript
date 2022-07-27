@@ -6,39 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="notaQtd(not,ent)">
     <script>
-       
-    //    let valor = prompt("Informe um número:")
-        
-          
 
-    //     const notas = [100, 50, 20, 10, 5, 2]    
-
-    //    for(let nota of notas){
-    //         let qtdNotas = parseInt(valor/nota);
-    //         document.write(+ tdNotas + "nota(s) de R$"+nota+",00");     
-    //         valor = valor % nota;
-    //    }
-
-    function contanotas(notas,entrada)
-
-    var notas = [2,5,10,20,50,100];
-    var entrada  = prompt("Digite o valor do saque(apenas números inteiros sem pontos):\nNotas disponíveis(100,50,20,10,5,2)");
-
-   for(var i = 0; i < notas.length; i++){
-        if(entrada >= notas[i])
-           var notaM = notas[i];
+    function notaQtd(notas,entrada){
+       for(var i = 0; i < notas.length; i++)
+    {   if(entrada >= notas[i])
+        {   var notaM = notas[i];
+        }
     }
-    
     var numN = entrada / notaM;
-        document.write((parseInt(numN) + " notas de : " + notaM));
-        resto = parseFloat(entrada % notaM);
-    if((resto != 0) && (resto > 1)){
-        notaQtd(notas,resto);
-    }else if(resto != 0){
-        document.write("Sobrou :" + resto);
+    document.write(parseInt(numN) + " notas de : " + notaM +",00"+"<br>");
+    resto = parseFloat(entrada % notaM);
+    if((resto != 0) && (resto > 1))
+    {   notaQtd(notas,resto);
+    }else if(resto != 0)
+    {   document.write("Sobrou na conta  :R$ " + resto+",00" );   
     }
+    }
+    var not = [2,5,10,20,50,100];
+    var ent  = prompt("Digite o valor do saque:\nNotas disponíveis\n(R$ 100,00 - R$ 50,00 - R$ 20,00 - R$ 10,00 - R$ 5,00 - R$ 2,00)");
+
+</script>
+</body>
 
 
 

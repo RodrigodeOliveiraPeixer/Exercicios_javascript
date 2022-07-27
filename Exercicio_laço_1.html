@@ -9,17 +9,24 @@
 <body>
     <script>
 
-        let listaNomes = []
-        let nome = true // boleana
+        let array_nomes_salaros = [[],[]]
+        let nome = ""
         let salario = 0
+        
 
-        while(nome){
+        do{
 
-            let nome = prompt("informe um nome ou fim para sair")
-                nome = (nome != "fim")
+            nome = prompt("informe um nome ou fim para sair")
+            array_nomes_salaros[0].push(salario)
             
 
-            let salario = prompt("informe salario ")
+            salario = parseInt(prompt("informe salario "))
+            array_nomes_salaros[1].push(salario)
+
+        while(nome!="fim")  
+          
+
+
             
 
         // }
