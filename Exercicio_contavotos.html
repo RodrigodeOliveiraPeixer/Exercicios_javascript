@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 3) Crie um pequeno sistema de votação, exiba em um prompt() as opções:
+    // 1 - Alessandra
+    // 2 - Caio
+    // 3 - Geraldo
+    // 4 - Talita
+    // 5 - Sair
+
+
+    // Enquanto não for digitado o número 5 o laço deverá realizar a ação de
+    // prompt() para pedir o voto e contabilizar para o candidato.
+
+    // Quando informado o número 5 retorne a quantidade de votos que cada candidato
+    // obteve.
+        
+        
+        var votos = { 1:0, 2:0, 3:0, 4:0 }
+
+    while(true){
+	var voto = prompt("Qual é o seu voto?")
+	
+	if(voto == '5')
+     break
+
+	votos[voto] = votos[voto] + 1
+}
+
+    document.write('Alessandra: ', votos[1],"<br>")
+    document.write('Caio: ', votos[2],"<br>")
+    document.write('Geraldo: ', votos[3],"<br>")
+    document.write('Talita: ', votos[4],"<br>")
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

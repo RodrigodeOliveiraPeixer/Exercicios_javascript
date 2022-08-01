@@ -9,6 +9,26 @@
 <body onload="notaQtd(not,ent)">
     <script>
 
+// // 1) Um cliente do Banco deseja realizar um saque, o cliente deve informar um valor, o sistema que vc irá
+// desenvolver, deverá informar a quantidade de notas que devem ser retiradas do cofre.
+
+// Obs: O sistema deve priorizar a menor quantidade de notas por saque.
+
+// Notas disponíveis:
+//     2 | 5 | 10 | 20 | 50| 100
+
+// Exemplo de output:
+
+//     Valor do Saque: R$177,00
+//     Lista de Notas:
+//         1 nota 2 reais
+//         1 nota 5 reais
+//         1 nota 20 reais
+//         1 nota 50 reais
+//         1 nota 100 reais
+
+
+
     function notaQtd(notas,entrada){
        for(var i = 0; i < notas.length; i++)
     {   if(entrada >= notas[i])
